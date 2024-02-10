@@ -468,16 +468,16 @@ useEffect(()=>{
                   <Timer  time={selectedAmount ? Number(selectedAmount[1]): 0}/>
                     <div className=" p-5 flex justify-between" style={{ paddingTop: 80 }}>
                       <p className="st-desc">Earned Reward:</p>
-                      <p className="st-desc">{ Number(selectedAmount[6])/10**18}</p>
+                      {/* <p className="st-desc">{ Number(selectedAmount[6])/10**18}</p> */}
 
-                      {/* <p className="st-desc">{Number(selectedAmount)? Number(selectedAmount[6])/10**18:0}</p> */}
+                      <p className="st-desc">{selectedAmount? (Number(selectedAmount[6])/10**18).toFixed(2):0}</p>
                       
                     </div>
                     {/* <hr class="w-full border-black " /> */}
 
                     <div className=" p-5 flex justify-between">
                       <p className="st-desc">Pending Reward:</p>
-                      <p className="st-desc">187</p>
+                      <p className="st-desc">{selectedAmount? (Number(selectedAmount[7])/10**18).toFixed(2):0}</p>
                     </div>
                 </div>
 
